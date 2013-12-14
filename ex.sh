@@ -24,7 +24,7 @@ elif [ "${1}" == "1" ]; then
 	#state 1	-	wait for receive
 	
 	#start minimodem with receive command
-	minimodem -A --rx-one -q > /tmp/mm_rx;
+	minimodem -A --rx-one -q 300;
 	
 	#test for ID
 	grep -E '^[a-fA-F0-9]{8}$' /tmp/mm_rx;
